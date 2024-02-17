@@ -6,32 +6,39 @@
     <script src="bptech.js"></script>
 </head>
 <body>
-<p>
-    Calculate angle at which pedal will strike the ground
-</p>
-<form id="pedal-strike-angle">
-    <label for="bb-length">BB length [mm]:</label>
-    <input type="number" id="bb-length" name="tentacles" min="0" max="1000" value="60"/>
-    <br/>
-    <label for="bb-height">BB height [mm]:</label>
-    <input type="number" id="bb-height" name="tentacles" min="0" max="1000" value="300"/>
-    <br/>
-    <label for="crank-length">Crank length [mm]:</label>
-    <input type="number" id="crank-length" name="tentacles" min="0" max="1000" value="175"/>
-    <br/>
-    <label for="crank-offset">Crank offset (crank q factor) [mm]:</label>
-    <input type="number" id="crank-offset" name="tentacles" min="0" max="1000" value="20"/>
-    <br/>
-    <label for="pedal-width">Pedal width[mm]:</label>
-    <input type="number" id="pedal-width" name="tentacles" min="0" max="1000" value="60"/>
-    <br/>
-    <label for="pedal-thickness">Pedal thickness[mm]:</label>
-    <input type="number" id="pedal-thickness" name="tentacles" min="0" max="1000" value="15"/>
-    <br/>
-    <input type="submit" value="Calculate">
-    <br/>
-    Pedal strike angle: <input id="result" name="result" disabled/>
-</form>
+<div style="display: flex; flex-direction: row">
+    <div style="flex-basis: 0; min-width: 450px">
+        <p>
+            Calculate angle at which pedal will strike the ground
+        </p>
+        <form id="pedal-strike-angle">
+            <label for="bb-length">BB length [mm]:</label>
+            <input type="number" id="bb-length" name="tentacles" min="0" max="1000" value="60"/>
+            <br/>
+            <label for="bb-height">BB height [mm]:</label>
+            <input type="number" id="bb-height" name="tentacles" min="0" max="1000" value="300"/>
+            <br/>
+            <label for="crank-length">Crank length [mm]:</label>
+            <input type="number" id="crank-length" name="tentacles" min="0" max="1000" value="175"/>
+            <br/>
+            <label for="crank-offset">Crank offset (crank q factor) [mm]:</label>
+            <input type="number" id="crank-offset" name="tentacles" min="0" max="1000" value="20"/>
+            <br/>
+            <label for="pedal-width">Pedal width[mm]:</label>
+            <input type="number" id="pedal-width" name="tentacles" min="0" max="1000" value="60"/>
+            <br/>
+            <label for="pedal-thickness">Pedal thickness[mm]:</label>
+            <input type="number" id="pedal-thickness" name="tentacles" min="0" max="1000" value="15"/>
+            <br/>
+            <input type="submit" value="Calculate">
+            <br/>
+            Pedal strike angle: <input id="result" name="result" disabled/>
+        </form>
+    </div>
+    <div style="flex-basis: 0; display: inline-block">
+        <img src="crank.png" alt="crank" width="500"/>
+    </div>
+</div>
 <br/>
 
 
