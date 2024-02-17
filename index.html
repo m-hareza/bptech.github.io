@@ -1,25 +1,39 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.7px Arial; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-  </style>
+    <title>Bike polo tech</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="bptech.js"></script>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;head&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;title&gt;Example&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;body&gt;</span></p>
-<p class="p1"><span class="s1">        &lt;p&gt;This is an example of a simple HTML page with one paragraph.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">    &lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+<p>
+    Calculate angle at which pedal will strike the ground
+</p>
+<form id="pedal-strike-angle">
+    <label for="bb-length">BB length [mm]:</label>
+    <input type="number" id="bb-length" name="tentacles" min="0" max="1000" value="60"/>
+    <br/>
+    <label for="bb-height">BB height [mm]:</label>
+    <input type="number" id="bb-height" name="tentacles" min="0" max="1000" value="300"/>
+    <br/>
+    <label for="crank-length">Crank length [mm]:</label>
+    <input type="number" id="crank-length" name="tentacles" min="0" max="1000" value="175"/>
+    <br/>
+    <label for="crank-offset">Crank offset (crank q factor) [mm]:</label>
+    <input type="number" id="crank-offset" name="tentacles" min="0" max="1000" value="20"/>
+    <br/>
+    <label for="pedal-width">Pedal width[mm]:</label>
+    <input type="number" id="pedal-width" name="tentacles" min="0" max="1000" value="60"/>
+    <br/>
+    <label for="pedal-thickness">Pedal thickness[mm]:</label>
+    <input type="number" id="pedal-thickness" name="tentacles" min="0" max="1000" value="15"/>
+    <br/>
+    <input type="submit" value="Calculate">
+    <br/>
+    Pedal strike angle: <input id="result" name="result" disabled/>
+</form>
+<br/>
+
+
 </body>
 </html>
