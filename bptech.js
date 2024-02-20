@@ -1,4 +1,21 @@
 window.onload = function() {
+
+    $(document).ready(()=>{
+        $.getJSON("https://api.ipify.org?format=json",
+            function (data) {
+
+                // Displayin IP address on screen
+                $("#gfg").html(data.ip);
+            })
+    });
+
+    function get_kryzys_number(callback) {
+       return  $.getJSON("https://api.ipify.org?format=json",
+            function (data) {
+                const number = data.ip.replaceAll(".", "")
+                return callback(number);
+            })
+    }
     function radians_to_degrees(radians) {
         return radians * (180 / Math.PI);
     }
@@ -38,6 +55,8 @@ window.onload = function() {
         const angle = radians_to_degrees(angleInRadians);
         const pedalStrikeAngle = 90 - angle;
         $('#pedal-strike-angle').val(pedalStrikeAngle);
+
+        console.log()
     });
 
     $('#chainring-and-cog-sizes-form').on('submit', function (e) {
@@ -52,11 +71,15 @@ window.onload = function() {
             resultContainer.append(row);
         })
 
-    //     <tr>
-    //     <td>Alfreds Futterkiste</td>
-    //     <td>Maria Anders</td>
-    //     <td>Germany</td>
-    // </tr>
+
+    });
+
+    $('#kryzys-number-form').on('submit', function (e) {
+        e.preventDefault();
+        $('#kryzys-form-submit').attr('disabled', 'disabled')
+        get_kryzys_number((number) => {
+            $('#kryzys-number').val(number);
+        })
     });
 
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div style="display: flex; flex-direction: column">
+<div style="display: flex; flex-direction: column; gap: 20px">
     <div style="display: flex; flex-direction: column">
         <div style="display: flex">
             <h3> Pedal strike angle </h3>
@@ -73,6 +73,24 @@
                         </tr>
                     </table>
                 </form>
+            </div>
+
+        </div>
+    </div>
+    <div id="kryzys" style="display: flex; flex-direction: column">
+        <div style="display: flex">
+            <h3>Calculate your Kryzys's number</h3>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <div>
+                <p>
+                    How many goals I need to score to become the best playah in the world?
+                </p>
+                <form id="kryzys-number-form">
+                    <input id='kryzys-form-submit' type="submit" value="Reveal your Kryzys's number">
+                    <input id="kryzys-number" name="result" disabled/>
+                </form>
+
             </div>
 
         </div>
